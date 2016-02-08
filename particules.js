@@ -4,6 +4,7 @@ var width = Math.max(960, innerWidth),
 var i = 0;
 
 console.log("particules script")
+LINK = "http://40.media.tumblr.com/867a4fd4c6e1080c9a8524aef396e2fe/tumblr_nn2uxyfz6D1utp969o1_400.png"
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
@@ -31,7 +32,7 @@ function particle() {
 
   svg.append("image")
      // .attr("xlink:href",  "http://memesvault.com/wp-content/uploads/Funny-Meme-Faces-For-Facebook-1.png" )
-      .attr("xlink:href",  "http://40.media.tumblr.com/867a4fd4c6e1080c9a8524aef396e2fe/tumblr_nn2uxyfz6D1utp969o1_400.png")
+      .attr("xlink:href", LINK)
       .attr("x", m[0])
       .attr("y", m[1])
       .attr("width", 10)
@@ -52,3 +53,20 @@ function particle() {
 
   d3.event.preventDefault();
 }
+
+// $(document).click(function(e) {
+//    console.log("clic")
+//    svg.selectAll("image")
+//    .transition()
+//    .duration(3000)
+//    .ease(Math.sqrt)
+//       .attrTween("transform", tween)
+//       .style("opacity", 1e-3)
+//       .remove();
+// });
+
+// var tween = function (d, i, a) {
+
+//     console.log( this.attr("transform"));
+//     return d3.interpolateString("rotate(0, 900, 200)", "rotate(45, 900, 200)");
+// }

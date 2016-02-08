@@ -20,7 +20,30 @@ circle {
 
 </style>
 <body>
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<div id="menu">
+	<input type='file' />
+</div>
+
 
 <script src="particules.js"></script>
+<script type="text/javascript">
+	$(function () {
+	    $(":file").change(function () {
+	        if (this.files && this.files[0]) {
+	            var reader = new FileReader();
+	            reader.onload = imageIsLoaded;
+	            reader.readAsDataURL(this.files[0]);
+	        }
+	    });
+	});
+
+function imageIsLoaded(e) {
+    LINK = e.target.result;
+};
+</script>
+
 </body>
