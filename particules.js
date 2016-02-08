@@ -44,8 +44,8 @@ function particle() {
     .transition()
       .duration(2000)
       .ease(Math.sqrt)
-      .attr("width", 300)
-      .attr("height", 300)
+      .attr("width", 400)
+      .attr("height", 400)
       // .attr("r", 100)
       .style("opacity", 1e-3)
       .remove();
